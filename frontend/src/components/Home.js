@@ -37,42 +37,40 @@
 
 
 
-// src/components/Home.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "../App.css"; // or a separate Home.css if you want
+import "../App.css";
 
 function Home() {
   return (
-    <div className="app-container">
+    <div className="home-page">
       {/* Navbar */}
       <nav className="navbar">
-        <div className="nav-left">
-          <h2>AI Code Generator</h2>
-        </div>
+        <h2 className="logo">AI Code Generator</h2>
 
-        <div className="nav-right">
-          <Link to="/login">
-            <button className="nav-btn">Login</button>
-          </Link>
-          <Link to="/signup">
-            <button className="nav-btn">Signup</button>
-          </Link>
+        <div className="nav-actions">
+          <Link to="/login" className="nav-link">Login</Link>
+          <Link to="/signup" className="nav-link">Signup</Link>
         </div>
       </nav>
 
-      {/* Hero section */}
-      <main className="hero">
-        <h1>Welcome to AI Code Generator</h1>
+      {/* Center content */}
+      <main className="home-content">
+        <h1>Generate Code Instantly with AI</h1>
+
         <p>
-          Generate clean, optimized code in Python, Java, C++ or C from your problem statement.
+          Convert problem statements into clean, optimized code in Python, Java,
+          C++ and C using AI.
         </p>
-        <Link to="/login">
-          <button className="primary-btn">Get Started</button>
-        </Link>
+
+        <p>
+          Designed for students, developers, and interview preparation with
+          secure authentication and fast generation.
+        </p>
       </main>
     </div>
   );
 }
 
 export default Home;
+
