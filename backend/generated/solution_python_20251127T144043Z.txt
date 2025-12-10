@@ -1,0 +1,41 @@
+import sys
+
+def main():
+    """
+    Reads two numbers from a single line of standard input,
+    separated by a space, computes their sum, and prints the result
+    to standard output.
+    """
+    try:
+        # Read a line and split it into two parts
+        line = sys.stdin.readline()
+        if not line:
+            return
+            
+        parts = line.split()
+        
+        # Check if we got exactly two numbers
+        if len(parts) != 2:
+            # For a simple "sum of two numbers" problem, we can assume valid input.
+            # In a more robust program, we'd handle this error.
+            # For this problem, we'll proceed assuming valid input format.
+            pass
+
+        # Convert string parts to numbers (integers in this case)
+        num1 = int(parts[0])
+        num2 = int(parts[1])
+        
+        # Calculate the sum
+        result = num1 + num2
+        
+        # Print the result to standard output
+        print(result)
+        
+    except (ValueError, IndexError) as e:
+        # Handle cases where input is not valid numbers or not enough numbers are provided.
+        # For a basic problem, this might be omitted, but it's good practice.
+        # For this problem's constraints, we assume valid input.
+        pass
+
+if __name__ == "__main__":
+    main()
